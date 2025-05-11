@@ -1,0 +1,230 @@
+$color-cyan: hsl(180, 62%, 55%);
+$color-orange: hsl(34, 97%, 64%);
+$color-blue: hsl(212, 86%, 64%);
+$color-red: hsl(0, 78%, 62%);
+
+html{
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body{
+    color: hsl(234, 12%, 34%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 3rem;
+    > p{
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 200;
+}
+h1 b{
+    font-weight: 600;
+}
+
+.card{
+    width: auto;
+    height: 20rem;
+    box-shadow: 0 1rem 1.5rem hsla(210, 6%, 44%, 0.171);
+    border-radius: 1rem;
+    padding-top: 0.4rem;
+    margin: 3rem 0rem;
+}
+
+.card-content{
+    padding: 1rem 2.5rem 2.5rem 2.5rem;
+    background-color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    height: calc(100% - 3.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    img{
+        width: 5rem;
+        height: 5rem;
+        padding: 1.5rem 0;
+    }
+
+    h2, p{
+        width: 100%;
+        text-align: start;
+    }
+    h2{
+        margin-bottom: 0;
+        font-size: 1.7rem;
+    }
+    p{
+        width: calc(100%);
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 300;
+        padding-right: 0rem;
+    }
+}
+
+.item-1{
+    background-color: $color-cyan;
+}
+.item-2{
+    background-color: $color-red;
+}
+.item-3{
+    background-color: $color-orange;
+}
+.item-4{
+    background-color: $color-blue;
+}
+
+.attribution{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    a{
+        color: $color-blue;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+@media (min-width: 992px){
+
+    main{
+        margin-bottom: 5rem;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        > h1{
+            font-size: 3em;
+        }
+        > p{
+            font-size: 1.2em;
+            margin-top: 0;
+            width: 40rem;
+            margin-bottom: 3rem;
+            }
+    }
+
+    
+
+    .container{
+        max-width: 100%;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10rem 10rem 10rem 10rem;
+        gap: 2rem;
+        .card{
+            height: 20rem;
+        }
+        .card-content{
+            p{
+                width: calc(100% - 2rem);
+                font-size: 1em;
+                height: 100%;
+                padding-right: 2rem;
+            }
+            h2{
+                font-size: 1.5em;
+            }
+            img{
+                width: 4rem;
+                height: 4rem;
+
+            }
+
+        }
+        .item-1 {
+            grid-area: 2 / 1 / 4 / 2;
+        }
+        .item-2 {
+            grid-area: 1 / 2 / 3 / 3;
+        }
+        .item-3 {
+            grid-area: 3 / 2 / 5 / 3;
+        }
+        .item-4 {
+            grid-area: 2 / 3 / 4 / 4;
+        }
+
+        footer{
+            margin-top: 20rem;
+        }
+    }
+}
+
+@media (min-width: 1556px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+
+        > h1{
+            font-size: 3em;
+        }
+        > p{
+            font-size: 1.2em;
+            margin-top: 0;
+            width: 40rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .container{
+        max-width: calc(100% - 3rem);
+        padding: 0 10rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 8rem 8rem 8rem 8rem;
+        gap: 2rem;
+        .card{
+            height: 18rem;
+        }
+        .card-content{
+            p{
+                width: calc(100% - 2rem);
+                font-size: 1em;
+                height: 100%;
+                padding-right: 2rem;
+            }
+            h2{
+                font-size: 1.5em;
+            }
+
+        }
+        .item-1 {
+            grid-area: 2 / 1 / 4 / 2;
+        }
+        .item-2 {
+            grid-area: 1 / 2 / 3 / 3;
+        }
+        .item-3 {
+            grid-area: 3 / 2 / 5 / 3;
+        }
+        .item-4 {
+            grid-area: 2 / 3 / 4 / 4;
+        }
+    }
+}
