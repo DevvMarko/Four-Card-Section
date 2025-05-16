@@ -146,12 +146,11 @@ h1 b{
             h2{
                 font-size: 1.5em;
             }
-            img{
+           img{
                 width: 4rem;
                 height: 4rem;
 
             }
-
         }
         .item-1 {
             grid-area: 2 / 1 / 4 / 2;
@@ -196,7 +195,7 @@ h1 b{
         max-width: calc(100% - 3rem);
         padding: 0 10rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fra);
         grid-template-rows: 8rem 8rem 8rem 8rem;
         gap: 2rem;
         .card{
